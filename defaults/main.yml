@@ -51,7 +51,7 @@ fusioninventory__agent_package_url: 'http://debian.fusioninventory.org/downloads
 #   Default. Ensure that fusioninventory agent is installed and configured as requested.
 #
 # ``absent``
-#   Ensure that fusioninventory agent is uninstalled and it's configuration is removed.
+#   Ensure that fusioninventory agent is uninstalled.
 #
 fusioninventory__agent_deploy_state: 'present'
                                                                    # ]]]
@@ -73,6 +73,20 @@ fusioninventory__agent_service_name: 'fusioninventory-agent'
 #   The service is disabled from startup.
 #
 fusioninventory__agent_service_manage: True
+
+                                                                   # ]]]
+                                                                   # ]]]
+# Configuration [[[
+# -----------------------------
+
+# .. envvar:: fusioninventory__agent_conf_src [[[
+#
+# Template used to provide agent configuration file.
+#
+# Must be a relative path from default/ directory of this role or to your
+# ansible inventory directory.
+#
+fusioninventory__agent_conf_src: '../templates/etc/fusioninventory/agent.cfg.j2'
 
                                                                    # ]]]
                                                                    # ]]]

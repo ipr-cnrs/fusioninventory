@@ -20,6 +20,7 @@ A role to manage FusionInventory agent installation and configuration.
 * **fusioninventory__agent_deploy_state** : What is the desired state which this role should achieve [default : `present`].
 * **fusioninventory__agent_service_name** : The service name to manage [default : `fusioninventory-agent`].
 * **fusioninventory__agent_service_manage** : If the fusioninventory agent service should be managed [default : `True`].
+* **fusioninventory__agent_conf_src** : Template used to provide agent configuration file [default : `../templates/etc/fusioninventory/agent.cfg.j2`].
 
 ## Example Playbook
 
@@ -47,6 +48,7 @@ A role to manage FusionInventory agent installation and configuration.
 This role will :
 * Install needed dependent packages of fusioninventory-agent.
 * Install fusioninventory-agent package from official project package/URL.
+* Generate agent's configuration file.
 
 ## Development
 
