@@ -1,0 +1,15 @@
+galaxy_info:
+  author: "Jérémy Gardais"
+  description: "Manage FusionInventory Agent"
+  license: WTFPL
+  company: IPR
+  issue_tracker_url: https://git.ipr.univ-rennes1.fr/cellinfo/ansible.fusioninventory-agent/issues
+  min_ansible_version: 2.6
+  platforms:
+  - name: Debian
+    versions:
+    - stretch
+  galaxy_tags:
+    - agent
+    - fusion
+    - inventory

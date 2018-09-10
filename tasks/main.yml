@@ -1,0 +1,26 @@
+---
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
+#
+# tasks file for fusioninventory
+
+# Manage agent package [[[1
+- name: Ensure fusioninventory agent package from URL
+  apt:
+    deb: '{{ fusioninventory__agent_package_url | d(omit) }}'
+    state: '{{ "present" if (fusioninventory__agent_deploy_state == "present") else "absent" }}'
+  when: fusioninventory__agent_package_url != ""
+
+- name: Ensure fusioninventory agent package from REPOS
+  package:
+    name: 'fusioninventory-agent'
+    state: '{{ "present" if (fusioninventory__agent_deploy_state == "present") else "absent" }}'
+  when: fusioninventory__agent_package_url == ""
+
+# Manage dependent packages [[[1
+- name: Ensure dependent packages are in there desired state
+  package:
+    name: '{{ item }}'
+    state: '{{ "present" if (fusioninventory__agent_deploy_state == "present") else "absent" }}'
+  with_flattened:
+    - '{{ fusioninventory__agent_depend_packages }}'
+

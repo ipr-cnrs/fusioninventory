@@ -1,0 +1,78 @@
+---
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
+
+# ipr-cnrs.fusioninventory default variables [[[
+# ======================================
+
+# Packages and installation [[[
+# -----------------------------
+
+# .. envvar:: fusioninventory__agent_version [[[
+#
+# The version of Fusioninventory agent to install.
+#
+fusioninventory__agent_version: '2.4-2'
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_depend_packages [[[
+#
+# List of dependent packages to install.
+fusioninventory__agent_depend_packages:
+  - 'dmidecode'
+  - 'hwdata'
+  - 'hdparm'
+  - 'libuniversal-require-perl'
+  - 'libwww-perl'
+  - 'libparse-edid-perl'
+  - 'libproc-daemon-perl'
+  - 'libfile-which-perl'
+  - 'libhttp-daemon-perl'
+  - 'libxml-treepp-perl'
+  - 'libyaml-perl'
+  - 'libnet-cups-perl'
+  - 'libnet-ip-perl'
+  - 'libdigest-sha-perl'
+  - 'libsocket-getaddrinfo-perl'
+  - 'libtext-template-perl'
+                                                                       # ]]]
+# .. envvar:: fusioninventory__agent_package_url [[[
+#
+# The URL used to download deb package for fusioninventory-agent.
+#
+# See the official documentation for more informations :
+# http://fusioninventory.org/documentation/agent/installation/linux/deb.html
+#
+fusioninventory__agent_package_url: 'http://debian.fusioninventory.org/downloads/fusioninventory-agent_{{ fusioninventory__agent_version }}_all.deb'
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_deploy_state [[[
+#
+# What is the desired state which this role should achieve ? Possible options :
+#
+# ``present``
+#   Default. Ensure that fusioninventory agent is installed and configured as requested.
+#
+# ``absent``
+#   Ensure that fusioninventory agent is uninstalled and it's configuration is removed.
+#
+fusioninventory__agent_deploy_state: 'present'
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_service_name [[[
+#
+# The service name to manage.
+#
+fusioninventory__agent_service_name: 'fusioninventory-agent'
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_service_manage [[[
+#
+# If the fusioninventory agent service should be managed ? Possible options :
+#
+# ``True``
+#   Default. The service is started and enabled.
+#
+# ``False``
+#   The service is disabled from startup.
+#
+fusioninventory__agent_service_manage: True
+
+                                                                   # ]]]
+                                                                   # ]]]
