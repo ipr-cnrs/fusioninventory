@@ -1,0 +1,7 @@
+---
+# handlers file for fusioninventory-agent
+- name: restart fusioninventory-agent service
+  service:
+    name: '{{ fusioninventory__agent_service_name }}'
+    state: "restarted"
+    enabled: '{{ fusioninventory__agent_service_manage | bool }}'

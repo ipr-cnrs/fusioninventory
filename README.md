@@ -49,6 +49,7 @@ This role will :
 * Install needed dependent packages of fusioninventory-agent.
 * Install fusioninventory-agent package from official project package/URL.
 * Generate agent's configuration file.
+* Manage agent's systemd service.
 
 ## Development
 

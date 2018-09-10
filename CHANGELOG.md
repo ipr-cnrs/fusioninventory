@@ -5,3 +5,4 @@
 * Install dependent packages for fusioninventory-agent.
 * Install fusioninventory-agent package from URL.
 * Generate agent's configuration file.
+* Restart agent's service if needed.
