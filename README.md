@@ -47,6 +47,7 @@ A role to manage FusionInventory agent installation and configuration.
 
 This role will :
 * Install needed dependent packages of fusioninventory-agent.
+* Once installed, the dependencies will not be removed.
 * Install fusioninventory-agent package from official project package/URL.
 * Generate agent's configuration file.
 * Manage agent's systemd service.
