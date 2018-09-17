@@ -15,7 +15,7 @@
 # Manage agent package [[[1
 - name: Ensure fusioninventory-agent package from URL
   apt:
-    deb: '{{ fusioninventory__agent_package_url | d(omit) }}'
+    deb: '{{ fusioninventory__agent_package_url }}'
   when: fusioninventory__agent_package_url != ""
         and fusioninventory__agent_deploy_state == "present"
 
