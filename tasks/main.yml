@@ -9,7 +9,7 @@
     name: '{{ item }}'
     state: 'present'
   with_flattened:
-    - '{{ fusioninventory__agent_depend_packages }}'
+    - '{{ fusioninventory__agent_depend_packages | to_nice_json }}'
   when: fusioninventory__agent_deploy_state == "present"
 
 # Manage agent package [[[1
