@@ -31,8 +31,10 @@ fusioninventory__agent_depend_packages:
   - 'libnet-cups-perl'
   - 'libnet-ip-perl'
   - 'libdigest-sha-perl'
+  - 'libjson-pp-perl'
   - 'libsocket-getaddrinfo-perl'
   - 'libtext-template-perl'
+  - 'lsb-base'
                                                                        # ]]]
 # .. envvar:: fusioninventory__agent_package_url [[[
 #
