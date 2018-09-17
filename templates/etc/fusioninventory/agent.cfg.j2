@@ -14,8 +14,14 @@
 #server = http://server.domain.com/ocsinventory
 # send tasks results to a FusionInventory for GLPI server
 #server = http://server.domain.com/glpi/plugins/fusioninventory/
+{% if fusioninventory__agent_conf_server_url %}
+server = {{ fusioninventory__agent_conf_server_url }}
+{% endif %}
 # write tasks results in a directory
 #local = /tmp
+{% if fusioninventory__agent_conf_local_dir %}
+local = {{ fusioninventory__agent_conf_local_dir }}
+{% endif %}
 
 #
 # Task definition options
@@ -30,7 +36,7 @@
 #
 
 # maximum delay before first target, in seconds
-delaytime = 3600
+delaytime = {{ fusioninventory__agent_conf_delaytime }}
 # do not contact the target before next scheduled time
 lazy = 0
 
@@ -40,10 +46,23 @@ lazy = 0
 
 # do not list local printers
 # no-category = printer
+{% if fusioninventory__agent_conf_no_category %}
+no-category = {{ fusioninventory__agent_conf_no_category }}
+{% endif %}
+{% if fusioninventory__agent_conf_scan_homedirs %}
 # allow to scan user home directories
+scan-homedirs = 1
+{% else %}
+# disable scan of user home directories
 scan-homedirs = 0
+{% endif %}
+{% if fusioninventory__agent_conf_scan_profiles %}
 # allow to scan user profiles
+scan-profiles = 1
+{% else %}
+# disable the scan of user profiles
 scan-profiles = 0
+{% endif %}
 # save the inventory as HTML
 html = 0
 # timeout for inventory modules execution
@@ -74,8 +93,13 @@ password =
 ca-cert-dir =
 # CA certificates file
 ca-cert-file =
+{% if fusioninventory__agent_conf_no_ssl_check %}
 # do not check server SSL certificate
+no-ssl-check = 1
+{% else %}
+# check server SSL certificate
 no-ssl-check = 0
+{% endif %}
 # connection timeout, in seconds
 timeout = 180
 
@@ -83,12 +107,17 @@ timeout = 180
 # Web interface options
 #
 
+{% if fusioninventory__agent_conf_no_httpd %}
 # disable embedded web server
+no-httpd = 1
+{% else %}
+# enable embedded web server
 no-httpd = 0
+{% endif %}
 # network interface to listen to
-httpd-ip =
+httpd-ip = {{ fusioninventory__agent_conf_httpd_ip }}
 # network port to listen to
-httpd-port = 62354
+httpd-port = {{ fusioninventory__agent_conf_httpd_port }}
 # trust requests without authentication token
 httpd-trust =
 
@@ -113,8 +142,13 @@ color = 0
 
 # add given tag to inventory results
 tag =
-# debug mode
+{% if fusioninventory__agent_conf_debug %}
+# enable debug mode
+debug = 1
+{% else %}
+# disable debug mode
 debug = 0
+{% endif %}
 
 # time to wait to reload config (0 means no reload, it's default value)
 # conf-reload-interval = 0

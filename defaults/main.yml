@@ -89,4 +89,119 @@ fusioninventory__agent_service_manage: True
 fusioninventory__agent_conf_src: '../templates/etc/fusioninventory/agent.cfg.j2'
 
                                                                    # ]]]
+# .. envvar:: fusioninventory__agent_conf_server_url [[[
+#
+# The URL of your Fusioninventory-server/GLPI/…
+#
+fusioninventory__agent_conf_server_url: ''
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_local_dir [[[
+#
+# Write tasks results in a directory
+#
+fusioninventory__agent_conf_local_dir: ''
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_delaytime [[[
+#
+# Set an initial delay before the first target.
+#
+fusioninventory__agent_conf_delaytime: '3600'
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_no_category [[[
+#
+# Do not list given category items in inventory task.
+# Should be a string with comma as a separator between categories.
+#
+fusioninventory__agent_conf_no_category: ''
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_scan_homedirs [[[
+#
+# Enable the scan of user home directories. Possible options :
+#
+# ``False``
+#   Default.
+#
+# ``True``
+#   The agent will scan homedirs.
+#
+fusioninventory__agent_conf_scan_homedirs: False
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_scan_profiles [[[
+#
+# Enable the scan of users list. Possible options :
+#
+# ``False``
+#   Default.
+#
+# ``True``
+#   The agent will scan user profile.
+#
+fusioninventory__agent_conf_scan_profiles: False
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_no_ssl_check [[[
+#
+# Disable check of the server SSL certificate. Possible options :
+#
+# ``False``
+#   Default. The server's SSL certificate must be valid.
+#
+# ``True``
+#   The server's SSL certificate will not be checked.
+#
+fusioninventory__agent_conf_no_ssl_check: False
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_no_httpd [[[
+#
+# Disable embedded web server. Possible options :
+#
+# ``True``
+#   Default.
+#
+# ``False``
+#   The webserver will listen on the httpd-port (default to 62354).
+#
+fusioninventory__agent_conf_no_httpd: True
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_httpd_ip: [[[
+#
+# Interface/IP, the webserver server should listen to :
+#
+# ``''``
+#   Default. Empty so listen on all interfaces.
+#
+fusioninventory__agent_conf_httpd_ip: ''
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_httpd_port: [[[
+#
+# TCP port used by the webserver server to listen :
+#
+# ``62354``
+#   Default.
+#
+fusioninventory__agent_conf_httpd_port: '62354'
+
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_debug [[[
+#
+# If debug mode should be enabled. Possible options :
+#
+# ``False``
+#   Default.
+#
+# ``True``
+#   Debug mode is enable and fusioninventory-agent will send informations
+#   to journalctl/syslog/…
+#
+fusioninventory__agent_conf_debug: False
+
+                                                                   # ]]]
                                                                    # ]]]
