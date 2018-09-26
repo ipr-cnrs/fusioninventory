@@ -35,6 +35,7 @@ fusioninventory__agent_depend_packages:
   - 'libsocket-getaddrinfo-perl'
   - 'libtext-template-perl'
   - 'lsb-base'
+  - 'xz-utils'
                                                                        # ]]]
 # .. envvar:: fusioninventory__agent_package_url [[[
 #
