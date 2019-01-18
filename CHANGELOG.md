@@ -1,5 +1,10 @@
 
-## v1.0
+## v1.0.1
+
+### Features
+* Package URL is defined only for Debian Stretch.
+
+## v1.0.0
 
 ### Features
 * Install dependent packages for fusioninventory-agent.
@@ -8,4 +13,4 @@
 * If desired, remove fusioninventory-agent package.
 * Generate agent's configuration file.
 * Restart agent's service if needed.
-* Ensure to install xz-utils to allow ansible to a package out of a repos.
+* Ensure to install xz-utils to allow ansible to install a debian package manually.

@@ -16,7 +16,7 @@ A role to manage FusionInventory agent installation and configuration.
 
 * **fusioninventory__agent_version** : The version of Fusioninventory agent to install [default : `2.4-2`].
 * **fusioninventory__agent_depend_packages** : List of dependent packages to install.
-* **fusioninventory__agent_package_url** : The URL used to download deb package for fusioninventory-agent [default : `http://debian.fusioninventory.org/downloads/fusioninventory-agent_{{ fusioninventory__agent_version }}_all.deb`].
+* **fusioninventory__agent_package_url** : The URL used to download deb package for fusioninventory-agent [default : `http://debian.fusioninventory.org/downloads/fusioninventory-agent_{{ fusioninventory__agent_version }}_all.deb` for Debian Stretch only].
 * **fusioninventory__agent_deploy_state** : What is the desired state which this role should achieve [default : `present`].
 * **fusioninventory__agent_service_name** : The service name to manage [default : `fusioninventory-agent`].
 * **fusioninventory__agent_service_manage** : If the fusioninventory agent service should be managed [default : `True`].
@@ -33,7 +33,7 @@ A role to manage FusionInventory agent installation and configuration.
       tags: ['role::fusioninventory', 'ipr', inventory']
 ```
 
-* Install fusioninventory-agent from repository (unavailable in Debian Stretch) :
+* Install fusioninventory-agent from repository (unavailable in Debian Stretch and by default for all other release) :
 
 ``` yaml
 - hosts: mynode.DOMAIN

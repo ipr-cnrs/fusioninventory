@@ -44,7 +44,10 @@ fusioninventory__agent_depend_packages:
 # See the official documentation for more informations :
 # http://fusioninventory.org/documentation/agent/installation/linux/deb.html
 #
-fusioninventory__agent_package_url: 'http://debian.fusioninventory.org/downloads/fusioninventory-agent_{{ fusioninventory__agent_version }}_all.deb'
+fusioninventory__agent_package_url: '{{ "http://debian.fusioninventory.org/downloads/fusioninventory-agent_"+ fusioninventory__agent_version + "_all.deb"
+                                          if (ansible_distribution_release in
+                                              ([ "stretch" ]))
+                                          else "" }}'
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_deploy_state [[[
 #
