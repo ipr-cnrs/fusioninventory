@@ -2,6 +2,7 @@
 
 ### Fix
 * Fix E405 Remote package tasks should have a retry.
+* Fix E602 Don't compare to empty string.
 
 ## v1.0.1
 

@@ -20,8 +20,8 @@
     deb: '{{ fusioninventory__agent_package_url }}'
   register: pkg_agent_url_result
   until: pkg_agent_url_result is success
-  when: fusioninventory__agent_package_url != ""
-        and fusioninventory__agent_deploy_state == "present"
+  when: ((fusioninventory__agent_package_url) and
+         (fusioninventory__agent_deploy_state == "present"))
 
 - name: Ensure fusioninventory-agent package from REPOS
   package:
@@ -30,8 +30,8 @@
            else "absent" }}'
   register: pkg_agent_repo_result
   until: pkg_agent_repo_result is success
-  when: fusioninventory__agent_package_url == ""
-        or fusioninventory__agent_deploy_state == "absent"
+  when: ((not fusioninventory__agent_package_url) or
+         (fusioninventory__agent_deploy_state == "absent"))
 
 # Manage agent configuration file [[[1
 - name: Create Fusioninventory-agent configuration
