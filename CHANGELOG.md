@@ -3,6 +3,7 @@
 ### Fix
 * Fix E405 Remote package tasks should have a retry.
 * Fix E602 Don't compare to empty string.
+* Set empty dependencies line to fix Galaxy warning.
 
 ## v1.0.1
 
