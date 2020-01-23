@@ -1,3 +1,8 @@
+## vX.Y.Z
+
+### Fix
+* Fix Manage trust requests without authentication token (#1)
+
 ## v1.0.2
 
 ### Fix

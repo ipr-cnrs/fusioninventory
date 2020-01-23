@@ -196,6 +196,15 @@ fusioninventory__agent_conf_httpd_ip: ''
 fusioninventory__agent_conf_httpd_port: '62354'
 
                                                                    # ]]]
+# .. envvar:: fusioninventory__agent_conf_httpd_trust: [[[
+#
+# hostname or IP or subnet authorized for http request :
+#
+# ````
+#   Default.
+#
+fusioninventory__agent_conf_httpd_trust: ''
+                                                                   # ]]]
 # .. envvar:: fusioninventory__agent_conf_debug [[[
 #
 # If debug mode should be enabled. Possible options :
