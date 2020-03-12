@@ -2,6 +2,7 @@
 
 1. [Overview](#overview)
 2. [Role Variables](#role-variables)
+     * [Config Specific Variables](#config-specific-variables)
 3. [Example Playbook](#example-playbook)
 4. [Configuration](#configuration)
 5. [Development](#development)
@@ -22,6 +23,23 @@ A role to manage FusionInventory agent installation and configuration.
 * **fusioninventory__agent_service_manage** : If the fusioninventory agent service should be managed [default : `True`].
 * **fusioninventory__agent_conf_src** : Template used to provide agent configuration file [default : `../templates/etc/fusioninventory/agent.cfg.j2`].
 
+### Config Specific Variables
+
+Some variables used to generate FusionInventery agent.cfg file from Ansible template :
+
+* **fusioninventory__agent_conf_server_url** : The URL of your Fusioninventory-server/GLPI/… [default⎵: ``].
+* **fusioninventory__agent_conf_local_dir** : Write tasks results in a directory [default⎵: ``].
+* **fusioninventory__agent_conf_delaytime** : Set an initial delay before the first target [default⎵: `3600`].
+* **fusioninventory__agent_conf_no_category** : Do not list given category items in inventory task (separated by a comma) [default⎵: ``].
+* **fusioninventory__agent_conf_scan_homedirs** : Enable the scan of user home directories [default⎵: `False`].
+* **fusioninventory__agent_conf_scan_profiles** : Enable the scan of users list [default⎵: `False`].
+* **fusioninventory__agent_conf_no_ssl_check** : Disable check of the server SSL certificate [default⎵: `False`].
+* **fusioninventory__agent_conf_no_httpd** : Disable embedded web server [default⎵: `True`].
+* **fusioninventory__agent_conf_httpd_ip** : Interface/IP, the webserver server should listen to [default⎵: ``].
+* **fusioninventory__agent_conf_httpd_port** : TCP port used by the webserver server to listen [default⎵: `62354`].
+* **fusioninventory__agent_conf_httpd_trust** : hostname or IP or subnet authorized for http request [default⎵: ``].
+* **fusioninventory__agent_conf_debug** : If debug mode should be enabled [default⎵: `False`].
+
 ## Example Playbook
 
 * Use defaults vars :
@@ -30,7 +48,7 @@ A role to manage FusionInventory agent installation and configuration.
 - hosts: mynode.DOMAIN
   roles:
     - role: ipr-cnrs.fusioninventory
-      tags: ['role::fusioninventory', 'ipr', inventory']
+      tags: ['role::fusioninventory', 'ipr', 'inventory']
 ```
 
 * Install fusioninventory-agent from repository (unavailable in Debian Stretch and by default for all other release) :
