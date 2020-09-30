@@ -1,0 +1,11 @@
+---
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
+
+# http://fusioninventory.org/documentation/agent/installation/linux/rhel.html
+
+- name: Add EPEL Repository
+  yum_repository:
+    name: Epel
+    description: EPEL YUM repo
+    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    gpgkey: https://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
