@@ -1,3 +1,9 @@
+## v1.1.0
+
+### Features
+
+* Add RHEL7 support (thanks @roumano).
+
 ## v1.0.3
 
 ### Fix

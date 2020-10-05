@@ -1,0 +1,10 @@
+---
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
+
+- name: Ensure fusioninventory-agent package from URL
+  apt:
+    deb: '{{ fusioninventory__agent_package_url }}'
+  register: pkg_agent_url_result
+  until: pkg_agent_url_result is success
+  when: ((fusioninventory__agent_package_url) and
+         (fusioninventory__agent_deploy_state == "present"))
