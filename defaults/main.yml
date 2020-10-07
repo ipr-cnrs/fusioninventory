@@ -13,7 +13,19 @@
 #
 fusioninventory__agent_version: '2.4-2'
                                                                    # ]]]
-
+# .. envvar:: fusioninventory__agent_package_url [[[
+#
+# The URL used to download deb package for fusioninventory-agent.
+#
+# See the official documentation for more informations :
+# http://fusioninventory.org/documentation/agent/installation/linux/deb.html
+#
+# Only works with Debian
+fusioninventory__agent_package_url: '{{ "http://debian.fusioninventory.org/downloads/fusioninventory-agent_"+ fusioninventory__agent_version + "_all.deb"
+                                          if (ansible_distribution_release in
+                                              ([ "stretch" ]))
+                                          else "" }}'
+                                                                   # ]]]
 # .. envvar:: fusioninventory__agent_deploy_state [[[
 #
 # What is the desired state which this role should achieve ? Possible options :

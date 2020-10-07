@@ -1,3 +1,11 @@
+## v1.1.1
+
+### Fix
+
+* Moved back fusioninventory__agent_package_url definition in default configuration
+even if it's Debian related to allow installation of a newer version than one
+available in repos or installation from private repository (for Stretch).
+
 ## v1.1.0
 
 ### Features

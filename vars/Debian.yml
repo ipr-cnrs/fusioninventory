@@ -1,7 +1,7 @@
 ---
 # .. vim: foldmarker=[[[,]]]:foldmethod=marker
 
-# .. envvar:: fusioninventory__agent_depend_packages [[[
+# .. envvar:: fusioninventory__agent_depend_packages
 #
 # List of dependent packages to install.
 fusioninventory__agent_depend_packages:
@@ -24,18 +24,6 @@ fusioninventory__agent_depend_packages:
   - 'libtext-template-perl'
   - 'lsb-base'
   - 'xz-utils'
-                                                                       # ]]]
-# .. envvar:: fusioninventory__agent_package_url [[[
-#
-# The URL used to download deb package for fusioninventory-agent.
-#
-# See the official documentation for more informations :
-# http://fusioninventory.org/documentation/agent/installation/linux/deb.html
-#
-fusioninventory__agent_package_url: '{{ "http://debian.fusioninventory.org/downloads/fusioninventory-agent_"+ fusioninventory__agent_version + "_all.deb"
-                                          if (ansible_distribution_release in
-                                              ([ "stretch" ]))
-                                          else "" }}'
-                                                                   # ]]]
+
 fusioninventory__agent_packages:
   - 'fusioninventory-agent'
