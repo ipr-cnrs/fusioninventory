@@ -16,6 +16,7 @@ fusioninventory__agent_depend_packages:
   - 'libhttp-daemon-perl'
   - 'libxml-treepp-perl'
   - 'libyaml-perl'
+  - 'libyaml-tiny-perl'
   - 'libnet-cups-perl'
   - 'libnet-ip-perl'
   - 'libdigest-sha-perl'
