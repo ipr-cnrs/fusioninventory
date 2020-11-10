@@ -1,6 +1,7 @@
 ## v1.1.2
 
 * Add missing dependencies (libyaml-tiny-perl, libxml-treepp-perl and ucf).
+* The role also works on Debian Buster.
 
 ## v1.1.1
 
