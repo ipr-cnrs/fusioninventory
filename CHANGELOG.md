@@ -1,3 +1,7 @@
+## v1.1.2
+
+* Add missing dependencies (libyaml-tiny-perl, libxml-treepp-perl and ucf).
+
 ## v1.1.1
 
 ### Fix
