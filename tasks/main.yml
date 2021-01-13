@@ -4,10 +4,12 @@
 # tasks file for fusioninventory
 
 - name: Include package list per OS
-  include_vars: "{{ item }}"
-  with_first_found:
-  - "{{ ansible_distribution }}.yml"
-  - "{{ ansible_os_family }}.yml"
+  include_vars: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
 
 # Manage dependent packages [[[1
 - name: Ensure dependent packages are installed
@@ -23,10 +25,12 @@
 # Manage agent package [[[1
 
 # Specific tasks per OS will be in the include otherwise below
-- include: "{{ item }}"
-  with_first_found:
-  - "{{ ansible_distribution }}.yml"
-  - "{{ ansible_os_family }}.yml"
+- include: "{{ lookup('first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_distribution }}.yml"
+        - "{{ ansible_os_family }}.yml"
 
 - name: Ensure fusioninventory-agent package from REPOS
   package:
