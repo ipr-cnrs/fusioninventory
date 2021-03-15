@@ -3,9 +3,12 @@
 
 # http://fusioninventory.org/documentation/agent/installation/linux/rhel.html
 
+- name: Import EPEL GPG key
+  rpm_key:
+    key: "{{ fusioninventory__repo_gpgkey }}"
+    state: present
+
 - name: Add EPEL Repository
-  yum_repository:
-    name: Epel
-    description: EPEL YUM repo
-    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
-    gpgkey: https://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}
+  yum:
+    name: "{{ fusioninventory__repo_package }}"
+    state: present

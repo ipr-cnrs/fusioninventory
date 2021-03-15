@@ -10,3 +10,6 @@ fusioninventory__agent_depend_packages:
 fusioninventory__agent_packages:
   - 'fusioninventory-agent'
   - 'fusioninventory-agent-task-inventory'
+
+fusioninventory__repo_package: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm"
+fusioninventory__repo_gpgkey: "https://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-{{ ansible_distribution_major_version }}"
