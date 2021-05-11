@@ -13,11 +13,26 @@
     name: "{{ fusioninventory__repo_package }}"
     state: present
 
-- name: Enable PowerTools Repository
-  ini_file:
-    path: "{{ fusioninventory__powertools_repo_file }}"
-    section: "{{ item.section }}"
-    option: "{{ item.option }}"
-    value: "{{ item.value }}"
-  loop: "{{ fusioninventory__powertools_repo_params }}"
+- name: RedHat 8 specifics
+  block:
+
+  - name: Load additional repository settings for CentOS or RedHat 8
+    include_vars: "{{ item }}"
+    with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+
+  - name: Override repository settings for CentOS <= 8.2
+    include_vars: "CentOS-8.2.yml"
+    when:
+      - ansible_facts['distribution'] == "CentOS"
+      - ansible_facts['distribution_version'] | float <= 8.2
+
+  - name: Enable Additional Repository
+    ini_file:
+      path: "{{ fusioninventory__additional_repo_file }}"
+      section: "{{ item.section }}"
+      option: "{{ item.option }}"
+      value: "{{ item.value }}"
+    loop: "{{ fusioninventory__additional_repo_params }}"
+
   when: ansible_facts['distribution_major_version'] | int >= 8
