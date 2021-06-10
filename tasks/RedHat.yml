@@ -33,6 +33,7 @@
       section: "{{ item.section }}"
       option: "{{ item.option }}"
       value: "{{ item.value }}"
+      mode: "0644"
     loop: "{{ fusioninventory__additional_repo_params }}"
 
   when: ansible_facts['distribution_major_version'] | int >= 8
