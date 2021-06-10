@@ -1,9 +1,10 @@
-## v1.X.Y
+## v1.3.0
 
 ### Fix
 
 * Add role_name info in meta.
 * Set a default mode (0644) in ini_file.
+* with_first_found fail when ansible_distribution vars file is missing (#5).
 
 ### Enhancement
 
@@ -19,7 +20,7 @@
 
 ### Features
 
-* Add RHEL8 support (thanks @mjourdan).
+* Add RHEL8 support (thanks @mjourdan) (#7).
 * The role also works on Debian Bullseye.
 
 ## v1.1.2

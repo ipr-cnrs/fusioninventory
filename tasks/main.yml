@@ -8,8 +8,11 @@
   vars:
     params:
       files:
-        - "{{ ansible_distribution }}.yml"
-        - "{{ ansible_os_family }}.yml"
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      paths:
+        - 'vars'
+
 
 # Manage dependent packages [[[1
 - name: Ensure dependent packages are installed
@@ -25,12 +28,13 @@
 # Manage agent package [[[1
 
 # Specific tasks per OS will be in the include otherwise below
-- include: "{{ lookup('first_found', params) }}"
+- name: Include tasks per OS
+  include: "{{ lookup('first_found', params) }}"
   vars:
     params:
       files:
-        - "{{ ansible_distribution }}.yml"
-        - "{{ ansible_os_family }}.yml"
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
 
 - name: Ensure fusioninventory-agent package from REPOS
   package:
