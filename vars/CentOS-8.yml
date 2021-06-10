@@ -1,0 +1,10 @@
+---
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
+
+# For CentOS Linux 8.3 and above
+# https://wiki.centos.org/Manuals/ReleaseNotes/CentOS8.2011#Yum_repo_file_and_repoid_changes
+fusioninventory__additional_repo_file: "/etc/yum.repos.d/{{ ansible_distribution }}-Linux-PowerTools.repo"
+fusioninventory__additional_repo_params:
+  - section: powertools
+    option: enabled
+    value: "1"

@@ -1,0 +1,10 @@
+---
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
+
+# For RedHat Entreprise Linux 8
+# https://developers.redhat.com/blog/2018/11/15/introducing-codeready-linux-builder/
+fusioninventory__additionnal_repo_file: "/etc/yum.repos.d/redhat.repo"
+fusioninventory__additionnal_repo_params:
+  - section: codeready-builder-for-rhel-8-x86_64-rpms
+    option: enabled
+    value: "1"
