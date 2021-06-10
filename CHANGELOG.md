@@ -1,3 +1,8 @@
+## v1.2.0
+
+* Add RHEL8 support (thanks @mjourdan).
+* The role also works on Debian Bullseye.
+
 ## v1.1.2
 
 * Add missing dependencies (libyaml-tiny-perl, libxml-treepp-perl and ucf).

@@ -12,6 +12,7 @@ galaxy_info:
   platforms:
   - name: Debian
     versions:
+    - bullseye
     - buster
     - stretch
   - name: EL
@@ -20,5 +21,6 @@ galaxy_info:
     - 7
   galaxy_tags:
     - agent
+    - fusioninventory
     - fusion
     - inventory
