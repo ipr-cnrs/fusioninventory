@@ -5,6 +5,10 @@
 * Add role_name info in meta.
 * Set a default mode (0644) in ini_file.
 
+### Enhancement
+
+* Update dependencies for .deb package.
+
 ## v1.2.1
 
 ### Fix

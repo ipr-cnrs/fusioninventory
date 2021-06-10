@@ -9,7 +9,6 @@ fusioninventory__agent_depend_packages:
   - 'fusioninventory-agent'
   - 'hdparm'
   - 'hwdata'
-  - 'libdigest-sha-perl'
   - 'libfile-which-perl'
   - 'libhttp-daemon-perl'
   - 'libjson-pp-perl'
@@ -22,9 +21,14 @@ fusioninventory__agent_depend_packages:
   - 'libuniversal-require-perl'
   - 'libwww-perl'
   - 'libxml-treepp-perl'
+  - 'libxml-xpath-perl'
   - 'libyaml-perl'
+  - 'libyaml-tiny-perl'
   - 'lsb-base'
+  - 'pciutils'
   - 'ucf'
+  - 'usbutils'
+  - 'usb.ids'
   - 'xz-utils'
 
 fusioninventory__agent_packages:
