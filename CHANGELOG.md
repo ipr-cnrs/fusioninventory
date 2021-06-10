@@ -1,3 +1,9 @@
+## v1.X.Y
+
+### Fix
+
+* Add role_name info in meta.
+
 ## v1.2.1
 
 ### Fix

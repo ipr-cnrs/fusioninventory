@@ -3,6 +3,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: fusioninventory
   author: "Jérémy Gardais"
   description: "Manage FusionInventory Agent"
   license: WTFPL
