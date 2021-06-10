@@ -1,4 +1,12 @@
+## v1.2.1
+
+### Fix
+
+* Warnings with yamllint.
+
 ## v1.2.0
+
+### Features
 
 * Add RHEL8 support (thanks @mjourdan).
 * The role also works on Debian Bullseye.
