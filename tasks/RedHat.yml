@@ -17,9 +17,7 @@
   block:
 
   - name: Load additional repository settings for CentOS or RedHat 8
-    include_vars: "{{ item }}"
-    with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+    include_vars: "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
 
   - name: Override repository settings for CentOS <= 8.2
     include_vars: "CentOS-8.2.yml"
