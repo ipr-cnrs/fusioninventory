@@ -1,3 +1,9 @@
+## v1.3.1
+
+### Enhancement
+
+* Flatten packages list to allow condition.
+
 ## v1.3.0
 
 ### Fix
