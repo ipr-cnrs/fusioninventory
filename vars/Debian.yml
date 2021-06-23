@@ -5,8 +5,6 @@
 
 # List of dependent packages to install from a deb file
 fusioninventory__agent_depend_packages:
-  - 'fusioninventory-agent'
-  - 'hdparm'
   - 'hwdata'
   - 'libfile-which-perl'
   - 'libhttp-daemon-perl'
@@ -24,14 +22,17 @@ fusioninventory__agent_depend_packages:
   - 'libyaml-perl'
   - 'libyaml-tiny-perl'
   - 'lsb-base'
-  - 'pciutils'
   - 'ucf'
-  - 'usbutils'
-  - 'usb.ids'
 
 # List of recommended packages to install from a deb file
 fusioninventory__agent_recommend_packages:
   - 'dmidecode'
+  - '{{ "util-linux"
+        if ansible_distribution_release in
+           [ "stretch" ]
+        else "fdisk" }}'
+  - 'hdparm'
+  - 'libio-socket-ssl-perl'
 
 # List of packages to be able install a deb file with Ansible
 fusioninventory__agent_extra_packages:

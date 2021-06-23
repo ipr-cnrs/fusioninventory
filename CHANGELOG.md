@@ -1,5 +1,9 @@
 ## v1.3.1
 
+### Fix
+
+* Update package list for Debian from `dpkg --info` of the last 2.6 version (fix #11).
+
 ### Enhancement
 
 * Flatten packages list to allow condition.
