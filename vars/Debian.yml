@@ -2,10 +2,9 @@
 # .. vim: foldmarker=[[[,]]]:foldmethod=marker
 
 # .. envvar:: fusioninventory__agent_depend_packages
-#
-# List of dependent packages to install.
+
+# List of dependent packages to install from a deb file
 fusioninventory__agent_depend_packages:
-  - 'dmidecode'
   - 'fusioninventory-agent'
   - 'hdparm'
   - 'hwdata'
@@ -29,6 +28,13 @@ fusioninventory__agent_depend_packages:
   - 'ucf'
   - 'usbutils'
   - 'usb.ids'
+
+# List of recommended packages to install from a deb file
+fusioninventory__agent_recommend_packages:
+  - 'dmidecode'
+
+# List of packages to be able install a deb file with Ansible
+fusioninventory__agent_extra_packages:
   - 'xz-utils'
 
 fusioninventory__agent_packages:

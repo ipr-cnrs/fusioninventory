@@ -3,6 +3,10 @@
 ### Enhancement
 
 * Flatten packages list to allow condition.
+* Split fusioninventory__agent_depend_packages content to 3 variables (for Debian)
+  * fusioninventory__agent_depend_packages
+  * fusioninventory__agent_recommend_packages
+  * fusioninventory__agent_extra_packages
 
 ## v1.3.0
 

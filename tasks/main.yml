@@ -13,11 +13,13 @@
       paths:
         - 'vars'
 
-
-# Manage dependent packages [[[1
-- name: Ensure dependent packages are installed
+# Manage fusioninventory related packages [[[1
+- name: Ensure related packages are installed
   package:
-    name: '{{ fusioninventory__agent_depend_packages | flatten }}'
+    name: '{{ (fusioninventory__agent_depend_packages|d([]) +
+               fusioninventory__agent_recommend_packages|d([]) +
+               fusioninventory__agent_extra_packages|d([]))
+          | flatten }}'
     state: 'present'
   register: pkg_dep_result
   until: pkg_dep_result is success
