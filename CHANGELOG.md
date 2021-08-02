@@ -11,6 +11,7 @@
   * fusioninventory__agent_depend_packages
   * fusioninventory__agent_recommend_packages
   * fusioninventory__agent_extra_packages
+* Manage dependencies only when FI is installed from a downloaded package.
 
 ## v1.3.0
 
