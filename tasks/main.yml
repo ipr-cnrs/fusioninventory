@@ -23,7 +23,8 @@
     state: 'present'
   register: pkg_dep_result
   until: pkg_dep_result is success
-  when: fusioninventory__agent_deploy_state == "present"
+  when: ((fusioninventory__agent_package_url|length > 0) and
+         (fusioninventory__agent_deploy_state == "present"))
 
 # Manage agent package [[[1
 
@@ -43,8 +44,7 @@
            else "absent" }}'
   register: pkg_agent_repo_result
   until: pkg_agent_repo_result is success
-  when: ((not fusioninventory__agent_package_url) or
-         (fusioninventory__agent_deploy_state == "absent"))
+  when: fusioninventory__agent_package_url|length == 0
 
 # Manage agent configuration file [[[1
 - name: Create Fusioninventory-agent configuration
