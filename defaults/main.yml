@@ -182,6 +182,16 @@ fusioninventory__agent_conf_httpd_port: '62354'
 #
 fusioninventory__agent_conf_httpd_trust: ''
                                                                    # ]]]
+# .. envvar:: fusioninventory__agent_conf_tag [[[
+#
+# Add given tag to inventory results
+#
+# ``''``
+#   Default. Empty so results are send without any tag.
+#
+fusioninventory__agent_conf_tag: ''
+
+                                                                   # ]]]
 # .. envvar:: fusioninventory__agent_conf_debug [[[
 #
 # If debug mode should be enabled. Possible options :

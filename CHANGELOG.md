@@ -1,3 +1,8 @@
+## v1.X.Y
+
+### Add
+* Now manage tag with fusioninventory__agent_conf_tag variable.
+
 ## v1.3.1
 
 ### Fix
