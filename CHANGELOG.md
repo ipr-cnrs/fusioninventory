@@ -1,7 +1,9 @@
 ## v1.X.Y
 
 ### Add
-* Now manage tag with fusioninventory__agent_conf_tag variable.
+* Manage new parameters:
+  * **tag** with fusioninventory__agent_conf_tag variable
+  * **no-task** with fusioninventory__agent_conf_no_task variable
 
 ## v1.3.1
 

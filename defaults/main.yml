@@ -86,6 +86,17 @@ fusioninventory__agent_conf_server_url: ''
 fusioninventory__agent_conf_local_dir: ''
 
                                                                    # ]]]
+# .. envvar:: fusioninventory__agent_conf_no_task [[[
+#
+# Do not run given task.
+# Should be a string with comma as a separator between tasks.
+#
+# ``''``
+#   Default. Empty so all tasks are runned.
+#
+fusioninventory__agent_conf_no_task: ''
+
+                                                                   # ]]]
 # .. envvar:: fusioninventory__agent_conf_delaytime [[[
 #
 # Set an initial delay before the first target.
@@ -97,6 +108,9 @@ fusioninventory__agent_conf_delaytime: '3600'
 #
 # Do not list given category items in inventory task.
 # Should be a string with comma as a separator between categories.
+#
+# ``''``
+#   Default. Empty so all categories are listed.
 #
 fusioninventory__agent_conf_no_category: ''
 

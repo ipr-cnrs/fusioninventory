@@ -29,6 +29,9 @@ local = {{ fusioninventory__agent_conf_local_dir }}
 
 # disable software deployment tasks
 #no-task = deploy
+{% if fusioninventory__agent_conf_no_task %}
+no-task = {{ fusioninventory__agent_conf_no_task }}
+{% endif %}
 #tasks = inventory,deploy,inventory
 
 #
