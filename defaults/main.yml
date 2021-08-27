@@ -207,6 +207,21 @@ fusioninventory__agent_conf_httpd_port: '62354'
 #
 fusioninventory__agent_conf_httpd_trust: ''
                                                                    # ]]]
+# .. envvar:: fusioninventory__agent_conf_log_logger: [[[
+#
+# Specifies the logger backend to use. The possible values are:
+#
+# ``syslog``
+#   Default. Log messages through the local syslog server.
+#
+#   ``file``
+#   Log messages in a file.
+#
+#   ``stderr``
+#   Log messages directly in the console.
+#
+fusioninventory__agent_conf_log_logger: 'syslog'
+                                                                   # ]]]
 # .. envvar:: fusioninventory__agent_conf_tag [[[
 #
 # Add given tag to inventory results

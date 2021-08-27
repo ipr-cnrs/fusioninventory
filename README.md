@@ -42,6 +42,7 @@ Some variables used to generate FusionInventery agent.cfg file from Ansible temp
 * **fusioninventory__agent_conf_httpd_ip** : Interface/IP, the webserver server should listen to [default⎵: ``].
 * **fusioninventory__agent_conf_httpd_port** : TCP port used by the webserver server to listen [default⎵: `62354`].
 * **fusioninventory__agent_conf_httpd_trust** : hostname or IP or subnet authorized for http request [default⎵: ``].
+* **fusioninventory__agent_conf_log_logger** : Specifies the logger backend to use [default⎵: `syslog`].
 * **fusioninventory__agent_conf_tag** : Add given tag to inventory results [default⎵: ``].
 * **fusioninventory__agent_conf_debug** : If debug mode should be enabled [default⎵: `False`].
 

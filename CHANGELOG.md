@@ -5,6 +5,7 @@
   * **tag** with fusioninventory__agent_conf_tag variable
   * **no-task** with fusioninventory__agent_conf_no_task variable
   * **tasks** with fusioninventory__agent_conf_tasks variable
+  * **logger** with fusioninventory__agent_conf_log_logger variable
 
 ## v1.3.1
 

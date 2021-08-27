@@ -132,7 +132,7 @@ httpd-trust = {{ fusioninventory__agent_conf_httpd_trust }}
 #
 
 # Logger backend, either Stderr, File or Syslog (Stderr)
-logger = syslog
+logger = {{ fusioninventory__agent_conf_log_logger }}
 # log file
 #logfile = /var/log/fusioninventory.log
 # maximum log file size, in MB
