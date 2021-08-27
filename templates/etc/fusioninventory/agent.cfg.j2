@@ -1,15 +1,12 @@
 # {{ ansible_managed }}
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
 
 # fusioninventory agent configuration
 
-# all defined values match default
 # all commented values are examples
 
 
-#
-# Target definition options
-#
-
+# Target definition options [[[
 # send tasks results to an OCS server
 #server = http://server.domain.com/ocsinventory
 # send tasks results to a FusionInventory for GLPI server
@@ -23,10 +20,9 @@ server = {{ fusioninventory__agent_conf_server_url }}
 local = {{ fusioninventory__agent_conf_local_dir }}
 {% endif %}
 
-#
-# Task definition options
-#
+# ]]]
 
+# Task definition options [[[
 # disable software deployment tasks
 #no-task = deploy
 {% if fusioninventory__agent_conf_no_task %}
@@ -37,19 +33,17 @@ no-task = {{ fusioninventory__agent_conf_no_task }}
 tasks = {{ fusioninventory__agent_conf_tasks }}
 {% endif %}
 
-#
-# Target scheduling options
-#
+# ]]]
 
+# Target scheduling options [[[
 # maximum delay before first target, in seconds
 delaytime = {{ fusioninventory__agent_conf_delaytime }}
 # do not contact the target before next scheduled time
 lazy = 0
 
-#
-# Inventory task specific options
-#
+# ]]]
 
+# Inventory task specific options [[[
 # do not list local printers
 # no-category = printer
 {% if fusioninventory__agent_conf_no_category %}
@@ -78,17 +72,15 @@ force = 0
 # additional inventory content file
 additional-content =
 
-#
-# Package deployment task specific options
-#
+# ]]]
 
+# Package deployment task specific options [[[
 # do not use peer to peer to download files
 no-p2p = 0
 
-#
-# Network options
-#
+# ]]]
 
+# Network options [[[
 # proxy address
 proxy =
 # user name for server authentication
@@ -109,10 +101,9 @@ no-ssl-check = 0
 # connection timeout, in seconds
 timeout = 180
 
-#
-# Web interface options
-#
+# ]]]
 
+# Web interface options [[[
 {% if fusioninventory__agent_conf_no_httpd %}
 # disable embedded web server
 no-httpd = 1
@@ -127,10 +118,9 @@ httpd-port = {{ fusioninventory__agent_conf_httpd_port }}
 # trust requests without authentication token
 httpd-trust = {{ fusioninventory__agent_conf_httpd_trust }}
 
-#
-# Logging options
-#
+# ]]]
 
+# Logging options [[[
 # Logger backend, either Stderr, File or Syslog (Stderr)
 logger = {{ fusioninventory__agent_conf_log_logger }}
 {% if fusioninventory__agent_conf_log_logger == 'file' %}
@@ -143,13 +133,17 @@ logfile-maxsize = {{ fusioninventory__agent_conf_log_file_maxsize }}
 # Syslog facility
 logfacility = {{ fusioninventory__agent_conf_log_facility }}
 {% endif %}
-# Use color in the console
+{% if fusioninventory__agent_conf_log_color %}
+# Use color in the console with stderr backend
+color = 1
+{% else %}
+# Don't use color in the console with stderr backend
 color = 0
+{% endif %}
 
-#
-# Execution mode options
-#
+# ]]]
 
+# Execution mode options [[[
 # add given tag to inventory results
 tag = {{ fusioninventory__agent_conf_tag }}
 {% if fusioninventory__agent_conf_debug %}
@@ -161,7 +155,9 @@ debug = 0
 {% endif %}
 
 # time to wait to reload config (0 means no reload, it's default value)
-# conf-reload-interval = 0
+# conf-reload-interval = 0
+
+# ]]]
 
 # Since 2.4, you can include all .cfg files from a folder or any given file
 # For example:

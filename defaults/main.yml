@@ -257,6 +257,19 @@ fusioninventory__agent_conf_log_file: '/var/log/fusioninventory.log'
 #
 fusioninventory__agent_conf_log_file_maxsize: '0'
                                                                    # ]]]
+# .. envvar:: fusioninventory__agent_conf_log_color [[[
+#
+# Enables color display for the stderr logger backend. Possible options :
+#
+# ``False``
+#   Default.
+#
+# ``True``
+#   Enable colors.
+#
+fusioninventory__agent_conf_log_color: False
+
+                                                                   # ]]]
 # .. envvar:: fusioninventory__agent_conf_tag [[[
 #
 # Add given tag to inventory results

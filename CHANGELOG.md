@@ -9,6 +9,7 @@
   * **logfacility** with fusioninventory__agent_conf_log_facility variable
   * **logfile** with fusioninventory__agent_conf_log_file variable
   * **logfile-maxsize** with fusioninventory__agent_conf_log_file_maxsize variable
+  * **color** with fusioninventory__agent_conf_log_color variable
 
 ## v1.3.1
 
