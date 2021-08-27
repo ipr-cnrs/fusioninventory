@@ -44,6 +44,8 @@ Some variables used to generate FusionInventery agent.cfg file from Ansible temp
 * **fusioninventory__agent_conf_httpd_trust** : hostname or IP or subnet authorized for http request [default⎵: ``].
 * **fusioninventory__agent_conf_log_logger** : Specifies the logger backend to use [default⎵: `syslog`].
 * **fusioninventory__agent_conf_log_facility** : Specifies the syslog facility to use for the syslog logger backend [default⎵: `LOG_DAEMON`].
+* **fusioninventory__agent_conf_log_file** : Specifies the file to use for the file logger backend [default⎵: `/var/log/fusioninventory.log`].
+* **fusioninventory__agent_conf_log_file_maxsize** : Specifies the maximum size for the log file, in MB [default⎵: `0`].
 * **fusioninventory__agent_conf_tag** : Add given tag to inventory results [default⎵: ``].
 * **fusioninventory__agent_conf_debug** : If debug mode should be enabled [default⎵: `False`].
 

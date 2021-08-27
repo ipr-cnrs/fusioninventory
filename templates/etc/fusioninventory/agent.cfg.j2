@@ -133,10 +133,12 @@ httpd-trust = {{ fusioninventory__agent_conf_httpd_trust }}
 
 # Logger backend, either Stderr, File or Syslog (Stderr)
 logger = {{ fusioninventory__agent_conf_log_logger }}
+{% if fusioninventory__agent_conf_log_logger == 'file' %}
 # log file
-#logfile = /var/log/fusioninventory.log
+logfile = {{ fusioninventory__agent_conf_log_file }}
 # maximum log file size, in MB
-#logfile-maxsize = 0
+logfile-maxsize = {{ fusioninventory__agent_conf_log_file_maxsize }}
+{% endif %}
 {% if fusioninventory__agent_conf_log_logger == 'syslog' %}
 # Syslog facility
 logfacility = {{ fusioninventory__agent_conf_log_facility }}

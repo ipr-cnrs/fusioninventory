@@ -238,6 +238,25 @@ fusioninventory__agent_conf_log_logger: 'syslog'
 #
 fusioninventory__agent_conf_log_facility: 'LOG_DAEMON'
                                                                    # ]]]
+# .. envvar:: fusioninventory__agent_conf_log_file: [[[
+#
+# Specifies the file to use for the file logger backend.
+#
+# ``/var/log/fusioninventory.log``
+#   Default.
+#
+fusioninventory__agent_conf_log_file: '/var/log/fusioninventory.log'
+                                                                   # ]]]
+# .. envvar:: fusioninventory__agent_conf_log_file_maxsize: [[[
+#
+# Specifies the maximum size for the log file, in MB.
+# When the max size is reached, the file is truncated.
+#
+# ``0``
+#   Default. 0 means unlimited size.
+#
+fusioninventory__agent_conf_log_file_maxsize: '0'
+                                                                   # ]]]
 # .. envvar:: fusioninventory__agent_conf_tag [[[
 #
 # Add given tag to inventory results
