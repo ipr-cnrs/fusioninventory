@@ -32,6 +32,7 @@ Some variables used to generate FusionInventery agent.cfg file from Ansible temp
 * **fusioninventory__agent_conf_server_url** : The URL of your Fusioninventory-server/GLPI/… [default⎵: ``].
 * **fusioninventory__agent_conf_local_dir** : Write tasks results in a directory [default⎵: ``].
 * **fusioninventory__agent_conf_no_task** : Do not run given task (separated by a comma) [default⎵: ``].
+* **fusioninventory__agent_conf_tasks** : Run given tasks in given order (separated by a comma) [default⎵: ``].
 * **fusioninventory__agent_conf_delaytime** : Set an initial delay before the first target [default⎵: `3600`].
 * **fusioninventory__agent_conf_no_category** : Do not list given category items in inventory task (separated by a comma) [default⎵: ``].
 * **fusioninventory__agent_conf_scan_homedirs** : Enable the scan of user home directories [default⎵: `False`].

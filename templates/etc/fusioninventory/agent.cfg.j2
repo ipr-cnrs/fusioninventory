@@ -33,6 +33,9 @@ local = {{ fusioninventory__agent_conf_local_dir }}
 no-task = {{ fusioninventory__agent_conf_no_task }}
 {% endif %}
 #tasks = inventory,deploy,inventory
+{% if fusioninventory__agent_conf_tasks %}
+tasks = {{ fusioninventory__agent_conf_tasks }}
+{% endif %}
 
 #
 # Target scheduling options
