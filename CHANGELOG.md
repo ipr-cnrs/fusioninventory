@@ -1,4 +1,4 @@
-## v1.X.Y
+## v1.4.0
 
 ### Add
 * Manage new parameters:
