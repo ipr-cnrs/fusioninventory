@@ -55,7 +55,7 @@ fusioninventory__agent_service_name: 'fusioninventory-agent'
 # ``False``
 #   The service is disabled from startup.
 #
-fusioninventory__agent_service_manage: True
+fusioninventory__agent_service_manage: true
 
                                                                    # ]]]
                                                                    # ]]]
@@ -136,7 +136,7 @@ fusioninventory__agent_conf_no_category: ''
 # ``True``
 #   The agent will scan homedirs.
 #
-fusioninventory__agent_conf_scan_homedirs: False
+fusioninventory__agent_conf_scan_homedirs: false
 
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_conf_scan_profiles [[[
@@ -149,7 +149,7 @@ fusioninventory__agent_conf_scan_homedirs: False
 # ``True``
 #   The agent will scan user profile.
 #
-fusioninventory__agent_conf_scan_profiles: False
+fusioninventory__agent_conf_scan_profiles: false
 
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_conf_no_ssl_check [[[
@@ -162,7 +162,7 @@ fusioninventory__agent_conf_scan_profiles: False
 # ``True``
 #   The server's SSL certificate will not be checked.
 #
-fusioninventory__agent_conf_no_ssl_check: False
+fusioninventory__agent_conf_no_ssl_check: false
 
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_conf_no_httpd [[[
@@ -175,7 +175,7 @@ fusioninventory__agent_conf_no_ssl_check: False
 # ``False``
 #   The webserver will listen on the httpd-port (default to 62354).
 #
-fusioninventory__agent_conf_no_httpd: True
+fusioninventory__agent_conf_no_httpd: true
 
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_conf_httpd_ip: [[[
@@ -267,7 +267,7 @@ fusioninventory__agent_conf_log_file_maxsize: '0'
 # ``True``
 #   Enable colors.
 #
-fusioninventory__agent_conf_log_color: False
+fusioninventory__agent_conf_log_color: false
 
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_conf_tag [[[
@@ -291,7 +291,7 @@ fusioninventory__agent_conf_tag: ''
 #   Debug mode is enable and fusioninventory-agent will send informations
 #   to journalctl/syslog/…
 #
-fusioninventory__agent_conf_debug: False
+fusioninventory__agent_conf_debug: false
 
                                                                    # ]]]
                                                                    # ]]]

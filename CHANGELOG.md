@@ -1,3 +1,8 @@
+## v1.X.Y
+
+### Fix
+* truthy warnings with ansible-lint.
+
 ## v1.4.0
 
 ### Add
