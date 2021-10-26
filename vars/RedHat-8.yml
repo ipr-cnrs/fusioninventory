@@ -8,3 +8,6 @@ fusioninventory__additional_repo_params:
   - section: codeready-builder-for-rhel-8-x86_64-rpms
     option: enabled
     value: "1"
+  - section: rhel-8-for-x86_64-appstream-rpms
+    option: enabled
+    value: "1"
