@@ -1,7 +1,8 @@
-## v1.X.Y
+## v1.4.1
 
 ### Fix
 * truthy warnings with ansible-lint.
+* complete rhel8 support (thanks @mjourdan − PR #13).
 
 ## v1.4.0
 
