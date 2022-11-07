@@ -1,3 +1,9 @@
+## v1.X.Y
+
+### Fix
+* Switch to Github URL to download deb file (thanks to @roumano - PR #16).
+* Pipe ansible_managed to `comment` jinja filter to manage multi-lines.
+
 ## v1.4.1
 
 ### Fix
