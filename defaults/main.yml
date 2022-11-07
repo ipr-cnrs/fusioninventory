@@ -11,7 +11,8 @@
 #
 # The version of Fusioninventory agent to install.
 #
-fusioninventory__agent_version: '2.4-2'
+fusioninventory__agent_version: '2.5.2-1'
+fusioninventory__agent_major_version: '2.5.2'
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_package_url [[[
 #
@@ -21,7 +22,7 @@ fusioninventory__agent_version: '2.4-2'
 # http://fusioninventory.org/documentation/agent/installation/linux/deb.html
 #
 # Only works with Debian
-fusioninventory__agent_package_url: '{{ "http://debian.fusioninventory.org/downloads/fusioninventory-agent_"+ fusioninventory__agent_version + "_all.deb"
+fusioninventory__agent_package_url: '{{ "https://github.com/fusioninventory/fusioninventory-agent/releases/download/" + fusioninventory__agent_major_version + "/fusioninventory-agent_" + fusioninventory__agent_version + "_all.deb"
                                           if (ansible_distribution_release in
                                               ([ "stretch" ]))
                                           else "" }}'
