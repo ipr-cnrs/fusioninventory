@@ -1,5 +1,8 @@
 ## v1.X.Y
 
+### Enhancement
+* Upgrade package version from URL from 2.4 to 2.6 (thanks to @roumano - issue #15).
+
 ### Fix
 * Switch to Github URL to download deb file (thanks to @roumano - PR #16).
 * Pipe ansible_managed to `comment` jinja filter to manage multi-lines.

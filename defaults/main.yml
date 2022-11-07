@@ -11,8 +11,8 @@
 #
 # The version of Fusioninventory agent to install.
 #
-fusioninventory__agent_version: '2.5.2-1'
-fusioninventory__agent_major_version: '2.5.2'
+fusioninventory__agent_version: '2.6-1'
+fusioninventory__agent_major_version: '2.6'
                                                                    # ]]]
 # .. envvar:: fusioninventory__agent_package_url [[[
 #
