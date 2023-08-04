@@ -56,3 +56,10 @@
     mode: '0644'
   when: fusioninventory__agent_deploy_state == "present"
   notify: ['restart fusioninventory-agent service']
+
+- name: Ensure the service is in the correct state
+  service:
+    name: "{{ fusioninventory__agent_service_name }}"
+    state: "{{ fusioninventory__agent_service_status }}"
+    enabled: "{{ fusioninventory__agent_service_enabled }}"
+  when: fusioninventory__agent_deploy_state == "present"
