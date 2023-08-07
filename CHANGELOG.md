@@ -2,6 +2,7 @@
 
 ### Enhancement
 * Upgrade package version from URL from 2.4 to 2.6 (thanks to @roumano - issue #15).
+* Allow running the agent with a cron job instead of the service (thanks to @yodabzh - issue #18)
 * Allow service to be managed, (thanks to @yodabzh - issue #17).
 
 ### Fix

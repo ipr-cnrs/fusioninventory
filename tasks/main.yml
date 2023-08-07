@@ -63,3 +63,17 @@
     state: "{{ fusioninventory__agent_service_status }}"
     enabled: "{{ fusioninventory__agent_service_enabled }}"
   when: fusioninventory__agent_deploy_state == "present"
+
+- name: "Create cron entry when needed"
+  cron:
+    name: fusion-inventory-oneshot
+    cron_file: fusion-inventory-oneshot
+    day: "{{ fusioninventory__agent_conf_cron_day }}"
+    hour: "{{ fusioninventory__agent_conf_cron_hour }}"
+    minute: "{{ fusioninventory__agent_conf_cron_minute }}"
+    month: "{{ fusioninventory__agent_conf_cron_month }}"
+    weekday: "{{ fusioninventory__agent_conf_cron_weekday }}"
+    user: "{{ fusioninventory__agent_conf_cron_user }}"
+    state: "{{ fusioninventory__agent_conf_cron }}"
+    job: "{{ fusioninventory__agent_conf_command }}"
+

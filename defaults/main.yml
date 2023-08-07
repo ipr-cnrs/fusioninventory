@@ -72,7 +72,66 @@ fusioninventory__agent_service_enabled: true
 fusioninventory__agent_service_manage: true
 
                                                                    # ]]]
+
+# Cron configuration [[[
+# -----------------------------
+# .. envvar:: fusioninventory__agent_conf_cron [[[
+#
+# Instead of running as an agent, run by cron. Can be "absent" or "present"
+#
+fusioninventory__agent_conf_cron: "absent"
                                                                    # ]]]
+
+# .. envvar:: fusioninventory__agent_conf_cron_day [[[
+#
+# Which days should the agent be ran
+#
+fusioninventory__agent_conf_cron_day: "*"
+                                                                   # ]]]
+
+# .. envvar:: fusioninventory__agent_conf_cron_hour [[[
+#
+# Which hours should the agent be ran
+#
+fusioninventory__agent_conf_cron_hour: "23"
+                                                                   # ]]]
+
+# .. envvar:: fusioninventory__agent_conf_cron_minute [[[
+#
+# Which minutes should the agent be ran
+#
+fusioninventory__agent_conf_cron_minute: "0"
+                                                                   # ]]]
+
+# .. envvar:: fusioninventory__agent_conf_cron_month [[[
+#
+# Which months should the agent be ran
+#
+fusioninventory__agent_conf_cron_month: "*"
+                                                                   # ]]]
+
+# .. envvar:: fusioninventory__agent_conf_cron_weekday [[[
+#
+# Which weekdays should the agent be ran
+#
+fusioninventory__agent_conf_cron_weekday: "*"
+                                                                   # ]]]
+
+# .. envvar:: fusioninventory__agent_conf_cron_user [[[
+#
+# Which user should the agent be ran under
+#
+fusioninventory__agent_conf_cron_user: "root"
+                                                                   # ]]]
+
+# .. envvar:: fusioninventory__agent_conf_command [[[
+#
+# The command should cron run
+#
+fusioninventory__agent_conf_command: "sleep $(( RANDOM \\% 3600 )); /usr/bin/fusioninventory-agent"
+                                                                   # ]]]
+                                                                   # ]]]
+
 # Configuration [[[
 # -----------------------------
 
