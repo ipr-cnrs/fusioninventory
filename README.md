@@ -1,5 +1,8 @@
 # FusionInventory
 
+As [fusioninventory-agent is no longer maintened](https://github.com/ipr-cnrs/fusioninventory/issues/12#issuecomment-937656377),
+you should consider using the "new" [glpi-agent role](https://github.com/ipr-cnrs/glpi-agent).
+
 1. [Overview](#overview)
 2. [Role Variables](#role-variables)
      * [Config Specific Variables](#config-specific-variables)

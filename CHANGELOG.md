@@ -1,4 +1,4 @@
-## v1.X.Y
+## v1.5.0
 
 ### Enhancement
 * Upgrade package version from URL from 2.4 to 2.6 (thanks to @roumano - issue #15).
