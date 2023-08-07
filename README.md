@@ -25,6 +25,17 @@ A role to manage FusionInventory agent installation and configuration.
 * **fusioninventory__agent_service_manage** : If the fusioninventory agent service should be managed [default : `true`].
 * **fusioninventory__agent_conf_src** : Template used to provide agent configuration file [default : `../templates/etc/fusioninventory/agent.cfg.j2`].
 
+## Cron variables
+
+* **fusioninventory__agent_conf_cron**: Enable (`"present"`) or disable (`"absent"`) a job cron to run the agent [default : `"absent"`].
+* **fusioninventory__agent_conf_cron_day**: Which days should the agent be ran [default : `"*"`].
+* **fusioninventory__agent_conf_cron_hour**: Which hours should the agent be ran [default : `"23"`].
+* **fusioninventory__agent_conf_cron_minute**: Which minutes should the agent be ran [default : `"0"`].
+* **fusioninventory__agent_conf_cron_month**: Which months should the agent be ran [default : `"*"`].
+* **fusioninventory__agent_conf_cron_weekday**: Which weekdays should the agent be ran [default : `"*"`].
+* **fusioninventory__agent_conf_cron_user**: Which user should the agent be ran under [default : `"root"`].
+* **fusioninventory__agent_conf_command**: The command should cron run [default : `"sleep $(( RANDOM \\% 3600 )); /usr/bin/fusioninventory-agent"`].
+
 ### Config Specific Variables
 
 Some variables used to generate FusionInventery agent.cfg file from Ansible template :
