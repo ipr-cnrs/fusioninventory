@@ -24,6 +24,8 @@ A role to manage FusionInventory agent installation and configuration.
 * **fusioninventory__agent_service_name** : The service name to manage [default : `fusioninventory-agent`].
 * **fusioninventory__agent_service_manage** : If the fusioninventory agent service should be managed [default : `true`].
 * **fusioninventory__agent_conf_src** : Template used to provide agent configuration file [default : `../templates/etc/fusioninventory/agent.cfg.j2`].
+* **fusioninventory__agent_service_status**: Service state, can be started, stopped, restarted, reloaded [default : `started`].
+* **fusioninventory__agent_service_enabled**: Service status, can be enabled (`true`) or disabled (`false`) [default: `true`].
 
 ### Config Specific Variables
 

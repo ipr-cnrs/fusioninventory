@@ -2,6 +2,7 @@
 
 ### Enhancement
 * Upgrade package version from URL from 2.4 to 2.6 (thanks to @roumano - issue #15).
+* Allow service to be managed, (thanks to @yodabzh - issue #17).
 
 ### Fix
 * Switch to Github URL to download deb file (thanks to @roumano - PR #16).
