@@ -30,7 +30,7 @@
 
 # Specific tasks per OS will be in the include otherwise below
 - name: Include tasks per OS
-  include: "{{ lookup('first_found', params) }}"
+  include_tasks: "{{ lookup('first_found', params) }}"
   vars:
     params:
       files:
